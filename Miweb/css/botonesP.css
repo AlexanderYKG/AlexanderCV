@@ -18,7 +18,7 @@ a:before {
   right: 0; /* Alinear el círculo a la derecha */
   transform: translateY(-50%);
   display: block;
-  border-radius: 10%; /* Usar un radio de borde circular */
+  border-radius: 5%; /* Usar un radio de borde circular */
   background: rgba(55, 116, 248, 0.5);
   width: 36px; /* Reducir el ancho del círculo */
   height: 36px; /* Reducir la altura del círculo */
@@ -58,7 +58,7 @@ a:active {
 /* Alineación de los enlaces en el header */
 header {
   display: flex;
-  justify-content: flex-end; /* Centrar los enlaces a la derecha */
+  justify-content: center; /* Centrar los enlaces a la derecha */
   align-items: center; /* Alinear verticalmente al centro */
 }
 
