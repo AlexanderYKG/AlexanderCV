@@ -1,5 +1,5 @@
 /* Estilo del enlace */
-a {
+.bf {
   text-decoration: none;
   color: inherit;
   position: relative;
@@ -11,7 +11,7 @@ a {
 }
 
 /* Estilo del círculo detrás del botón */
-a:before {
+.bf:before {
   content: "";
   position: absolute;
   top: 50%;
@@ -26,7 +26,7 @@ a:before {
 }
 
 /* Estilo del texto dentro del botón */
-a span {
+.bf span {
   font-size: 14px; /* Reducir el tamaño del texto */
   font-weight: 700;
   text-transform: uppercase;
@@ -34,7 +34,7 @@ a span {
 }
 
 /* Estilo del icono SVG dentro del botón */
-a svg {
+.bf svg {
   vertical-align: middle;
   fill: none;
   stroke: #111;
@@ -43,7 +43,7 @@ a svg {
 }
 
 /* Cambios al pasar el ratón sobre el botón */
-a:hover:before {
+.bf:hover:before {
   background: #1f0eb4;
   opacity: 0.7;
   width: 100%; /* Aumentar el tamaño del círculo al pasar el ratón */
@@ -51,7 +51,7 @@ a:hover:before {
 }
 
 /* Cambios al hacer clic en el botón */
-a:active {
+.bf:active {
   transform: scale(0.96);
 }
 
