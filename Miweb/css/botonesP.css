@@ -44,7 +44,7 @@
 
 /* Cambios al pasar el ratón sobre el botón */
 .bf:hover:before {
-  background: #1f0eb4;
+  background: #709ee7;
   opacity: 0.7;
   width: 100%; /* Aumentar el tamaño del círculo al pasar el ratón */
   height: 100%; /* Aumentar el tamaño del círculo al pasar el ratón */
