@@ -1,0 +1,90 @@
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+  }
+  body {
+    width: 100%;
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("../img/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+  }
+  
+  main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  body::-webkit-scrollbar {
+    width: 12px;
+    background-color: #ccc;
+  }
+  
+
+
+  h2,p{
+    color: #fff;
+  }
+  
+  
+  /* Media Queries para ajustes específicos en tamaños de pantalla */
+  @media sceen and (max-width: 768px) {
+    p,
+    .sobre-mi__lista,
+    .lista,
+    .proyectos__h3,
+    .inicio__h1,
+    .cuadros__h2,
+    .formsection__h2,
+    .sobre-mi__h2,
+    .sobre-mi__h3
+    {
+      font-size: 1rem; /* Tamaño más pequeño para dispositivos móviles */
+    }
+    .inicio__h1{
+      font-size: 1.25rem;
+    }
+    
+  }
+  
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    p,
+    .sobre-mi__lista,
+    .lista,
+    .proyectos__h3,
+    .inicio__h1,
+    .cuadros__h2,
+    .formsection__h2,
+    .sobre-mi__h2,
+    .sobre-mi__h3
+    {
+      font-size: 1.5rem; /* Tamaño intermedio para tablets */
+    }
+  }
+  
+  @media screen and (min-width: 1025px){
+    .inicio__p{
+      font-size: 1.5rem; /* Tamaño intermedio para tablets */
+    }
+    .inicio__h1{
+      font-size: 3rem;
+    }
+    .cuadros__h2{
+      font-size: 2rem;
+    }
+    .formsection__h2{
+      font-size: 2rem;
+    }
+    .sobre-mi__h2{
+      font-size: 2rem;
+    }
+  }
+  
+  

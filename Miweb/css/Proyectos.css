@@ -1,0 +1,36 @@
+.cuadros{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    padding: 4%;
+  }
+  .cuadros__fotos{
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+  }
+  
+  .cuadros__item{
+    height: 25rem;
+    flex: 0 1 300px;
+    margin: 10px;
+    border: 3px dashed #fffefe;
+    border-radius: 12px;
+    opacity: 0.7;
+  }
+  
+  .cuadros__divh2{
+    color: blue;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+
+  

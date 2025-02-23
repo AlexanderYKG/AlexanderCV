@@ -1,0 +1,62 @@
+.inicio {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .inicio__div {
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .inicio__div2{
+    color: #fff9f9;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .svg_inicio{
+    max-width: 20px;
+    display: inline-block;
+  } 
+  .inicio__h1{
+    color: aqua;
+    margin: 3px 0;
+  }
+
+.inicio__B{
+    margin-top: 10px;
+    color: #fff;
+  }
+
+  .B-svg{
+    padding: 0.4rem;
+    margin: 0.5rem;
+    background-color: #ffffff;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .B-svg:hover{
+    background-color: #709ee7;
+  }
+  .B-svg:active{
+    transform: scale(0.96);
+
+    transform: color 0.5s;
+  }
+
+  .p_Buton{
+    color: #000000;
+    display: inline;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+  }
