@@ -6,6 +6,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
   }
   
   .inicio__div {
@@ -15,48 +16,71 @@
     align-items: flex-start;
     flex-direction: column;
   }
-  .inicio__div2{
-    color: #fff9f9;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-  }
-  .svg_inicio{
-    max-width: 20px;
-    display: inline-block;
-  } 
+  
   .inicio__h1{
-    color: aqua;
+    font-weight: 800;
+    font-size: 3.5rem;
+    color: rgb(255, 255, 255);
     margin: 3px 0;
   }
-
-.inicio__B{
-    margin-top: 10px;
-    color: #fff;
+  .social{
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
   }
-
-  .B-svg{
-    padding: 0.4rem;
-    margin: 0.5rem;
-    background-color: #ffffff;
-    color: #ffffff;
+  .social-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    color: white;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .social-btn i {
+    margin-right: 10px;
+  }
+  
+  .social-btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-3px);
+  }
+  
+  button {
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    padding: 12px 25px;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
   }
-  .B-svg:hover{
-    background-color: #709ee7;
-  }
-  .B-svg:active{
-    transform: scale(0.96);
-
-    transform: color 0.5s;
+  
+  button:hover {
+    background-color: #005fa3;
   }
 
-  .p_Buton{
-    color: #000000;
-    display: inline;
-    font-size: 14px;
-    font-weight: 700;
-    text-transform: uppercase;
-
+  @media screen and (max-width: 768px) {
+    .inicio__h1 {
+      font-size: 2.5rem;
+    }
+    
+    #inicio h2 {
+      font-size: 1.4rem;
+    }
+    
+    .inicio__p {
+      font-size: 1rem;
+    }
+    
+    .cta-buttons {
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .social {
+      flex-wrap: wrap;
+    }
   }
