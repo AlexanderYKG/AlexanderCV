@@ -1,7 +1,8 @@
-.sobre-mi {
+#sobre-mi {
     padding: 4rem;
     margin: auto;
     width: 100%;
+    background-color: #070D0E;
   }
   .sobre-mi__div{
     max-width: 700px;
@@ -12,6 +13,12 @@
   }
   .sobre-mi__h2{
     color: #ffffff;
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
   }
   .sobre-mi__img{
     border-radius: 20%;
@@ -26,4 +33,23 @@
   .sbm-lista__li, .sobre-mi__p{
     margin: 10px 0;
     color: #ffffff;
+  }
+
+  @media screen and (max-width: 768px) {
+    .sobre-mi-content {
+      grid-template-columns: 1fr;
+    }
+    
+    .profile-image {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    
+    .profile-image img {
+      max-width: 250px;
+    }
+    
+    .year {
+      min-width: 80px;
+    }
   }

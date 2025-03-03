@@ -5,6 +5,7 @@
     flex-direction: row;
     justify-content: center;
     padding: 4%;
+    background-color: #070D0E;
   }
   .cuadros__fotos{
     width: 100%;
@@ -31,6 +32,11 @@
     align-content: center;
     align-items: center;
     margin-bottom: 25px;
+  }
+  @media screen and (max-width: 768px) {
+    .proyectos-container {
+      grid-template-columns: 1fr;
+    }
   }
 
   

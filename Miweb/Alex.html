@@ -7,29 +7,27 @@
   <title>CV AlexYorki</title>
   <link rel="stylesheet" href="css/Mein.css" />
   <link rel="stylesheet" href="css/normalize.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+z5vIOIopoKvv5+06KKe6a0EWd5J7Uew3JX0j2k" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
-
   <header>
     <nav class="botones-principales">
       <a href="#inicio" class="bf" id="Bton1"><i class="fas fa-home"></i> Inicio</a>
-      <a href="#sobre-mi" class="bf" id="Bton2"><i class="fas fa-home"></i> Sobre mi</a>
-      <a href="#contactos" class="bf" id="Bton3"><i class="fas fa-home"></i> Contactos</a>
-      <a href="#cuadros-proyecto" class="bf" id="Bton4"><i class="fas fa-home"></i>Proyectos</a>
+      <a href="#sobre-mi" class="bf" id="Bton2"><i class=""></i> Sobre mi</a>
+      <a href="#contactos" class="bf" id="Bton3"><i class=""></i> Contactos</a>
+      <a href="#cuadros-proyecto" class="bf" id="Bton4"><i class=""></i>Proyectos</a>
     </nav>
   </header>
 
   <main>
-    <section class="inicio" id="inicio">
+    <section id="inicio" class="seccion">
       <div class="inicio__div">
         <p class="inicio__p">
           Hola, soy Alexander Yorki👋
         </p>
         <h1 class="inicio__h1">
-          Desarrollador Frontend
+          Desarrollador<span style="color: rgb(96, 96, 231);"> Frontend</span>
         </h1>
         <p class="inicio__p">
           Apasionado por crear sitios web.
@@ -43,45 +41,42 @@
       </div>
     </section>
 
-    <section class="sobre-mi" id="sobre-mi">
-
+    <section id="sobre-mi" class="seccion">
+      <h2 class="sobre-mi__h2">
+        Sobre mi.&#128512;
+      </h2>
       <div class="sobre-mi__div">
-
-        <div class="sobre-mi__divFoto"><img  class="sobre-mi__img" src="img/copiaf2Miradaloca.jpg"></div>
-        <h2 class="sobre-mi__h2">
-          Sobre mi.&#128512;
-        </h2>
-        <p class="sobre-mi__p">
-          Soy Alexander Yorki García y actualmente soy estudiante de ingeniería electrónica en Argentina. Estoy muy entusiasmado con el mundo del desarrollo y, en particular, estoy aprendiendo tecnologías de frontend para crear experiencias web increíbles.
-        </p>
-        <p class="sobre-mi__p">
-          Tengo conocimientos básicos en Python y estoy emocionado de seguir avanzando y explorando más en el vasto mundo del desarrollo de software.
-        </p>
+       <div class="sobre-mi__divFoto"><img  class="sobre-mi__img" src="img/copiaf2Miradaloca.jpg"></div>
+         <p class="sobre-mi__p">
+           Soy Alexander Yorki García y actualmente soy estudiante de ingeniería electrónica en Argentina. Estoy muy entusiasmado con el mundo del desarrollo y, en particular, estoy aprendiendo tecnologías de frontend para crear experiencias web increíbles.
+         </p>
+         <p class="sobre-mi__p">
+           Tengo conocimientos básicos en Python y estoy emocionado de seguir avanzando y explorando más en el vasto mundo del desarrollo de software.
+         </p>
         
-        <h2 class="sobre-mi__h3">
-          Mis Estudios.
-        </h2>
-        <ul class="sbm-lista">
-          <li class="sbm-lista__li" > Alejandro Volta. Colegio Especializado en Electronica. 2019-2025</li>
-          <li class="sbm-lista__li">
+         <h2 class="sobre-mi__h3">
+           Mis Estudios.
+         </h2>
+         <ul class="sbm-lista">
+           <li class="sbm-lista__li" > Alejandro Volta. Colegio Especializado en Electronica. 2019-2025</li>
+           <li class="sbm-lista__li">
              Academia. Aprende programando, Desarrollo con Python. 
-          </li>
-          <li class="sbm-lista__li">
+           </li>
+           <li class="sbm-lista__li">
             Academia beta hub. Web Basics Digital Skills Diploma.
-          </li>
-        </ul>
-
+           </li>
+         </ul>
       </div>
 
     </section>
 
-    <section class="proyectos">
+    <section id="Habilidades" class="seccion">
       
-      <div class="contenedor-svg">
-        <h2 class="proyectos__h3">
+      <div class="contenedor-Habilidades">
+        <h2 class="Habilidades_h2">
           Habilidades
         </h2>     
-        <div class="skills-container">
+        <div class="skills-container-items">
           <div class="skill-item">
             <i class="fab fa-html5"></i>
             <span>HTML5</span>
@@ -107,7 +102,7 @@
       
     </section>
 
-    <div  id="cuadros-proyecto" class="cuadros">
+    <div id="cuadros-proyecto" class="cuadros">
         <div class="cuadros__divh2">
           <h2 class="cuadros__h2">
             Proyectos.
@@ -128,46 +123,62 @@
         </div>
     </div>
 
-    <section class="formsection" id="contactos">
-
-      <div class="formsection__div"> 
-        <h2 class="formsection__h2">Contacto.</h2>
-        <p class="formsection__p">No dudes en dejarme un mensaje :)</p>
-      </div>
-
-      <form class="formulario">
+    <section class="seccion" id="Formsection">
+      <div class="contenedorTotal-formulario">
+        <h2 class="section-title">Contacto.</h2>
+        <div class="contenedor2">
+          <div class="contacto-info">
+            <p>¿Interesado en trabajar juntos? Envíame un mensaje y conversemos sobre tu proyecto.</p>
+            
+            <div class="contact-methods">
+              <div class="contact-method">
+                <i class="fas fa-envelope"></i>
+                <span>correo@ejemplo.com</span>
+              </div>
+              <div class="contact-method">
+                <i class="fas fa-phone"></i>
+                <span>+123 456 7890</span>
+              </div>
+              <div class="contact-method">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Buenos Aires, Argentina</span>
+              </div>
+            </div>
+          </div>
+          
+          <form class="formulario">
         
-        <div class="formulario__div">
-          <label for="name">Nombre:</label>
-          <input class="formulario__input" type="text"  id="Nombre"  placeholder="Nombre Completo">
+            <div class="formulario__div">
+              <label for="name">Nombre</label>
+              <input class="formulario__input" type="text"  id="Nombre"  placeholder="Nombre Completo"required>
+            </div>
+
+          
+           <div class="formulario__div">
+             <label for="email">Correo</label>
+             <input class="formulario__input" type="text" id="email" placeholder="Correo electronico"required>
+           </div>
+
+          
+
+           <div class="formulario__div">
+             <label for="mensaje">mensaje</label>
+             <textarea id="mensaje" class="formulario__textarea" placeholder="Tu mensaje" required></textarea>
+           </div>
+
+          
+
+           <div>
+             <input class="formulario__input item--boton-sr" type="reset">
+           </div>
+
+
+           <div>
+             <input class="formulario__input item--boton-sr" type="submit">
+           </div>
+          </form>
         </div>
-
-        <br>
-
-        <div class="formulario__div">
-          <label for="email">Correo:</label>
-          <input class="formulario__input" type="text" id="email" placeholder="Correo electronico">
-        </div>
-
-        <br>
-
-        <div class="formulario__div">
-          <label for="mensaje">mensaje:</label>
-          <input class="formulario__input item--mensaje" type="text"  id="mensaje"   placeholder="mensaje">
-        </div>
-
-        <br>
-
-        <div>
-          <input class="formulario__input item--boton-sr" type="reset">
-        </div>
-
-        <br>
-
-        <div>
-          <input class="formulario__input item--boton-sr" type="submit">
-        </div>
-      </form>
+      </div>
     </section>
     <footer>
       <p>Made with ❤️ by AlexYK</p>
