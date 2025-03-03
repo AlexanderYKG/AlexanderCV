@@ -13,14 +13,14 @@
 
   }
   
-  main {
-    display: flex;
-    flex-wrap: wrap;
-  }
   
   body::-webkit-scrollbar {
     width: 12px;
     background-color: #ccc;
+  }
+  .seccion{
+    padding: 100px 0;
+    position: relative;
   }
   
 

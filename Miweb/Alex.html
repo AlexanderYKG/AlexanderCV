@@ -21,7 +21,7 @@
   </header>
 
   <main>
-    <section id="inicio" class="seccion">
+    <section id="inicio">
       <div class="inicio__div">
         <p class="inicio__p">
           Hola, soy Alexander Yorki👋
@@ -73,10 +73,12 @@
     <section id="Habilidades" class="seccion">
       
       <div class="contenedor-Habilidades">
-        <h2 class="Habilidades_h2">
+        <div class="div_h2">
+          <h2 class="Habilidades_h2">
           Habilidades
-        </h2>     
-        <div class="skills-container-items">
+        </h2>    
+        </div>
+        <div class="skills-container-items"> 
           <div class="skill-item">
             <i class="fab fa-html5"></i>
             <span>HTML5</span>
@@ -99,10 +101,10 @@
           </div>
         </div>
       </div>
-      
     </section>
 
-    <div id="cuadros-proyecto" class="cuadros">
+    <section id="Proyectos" class="seccion">
+      <div id="cuadros-proyecto" class="cuadros">
         <div class="cuadros__divh2">
           <h2 class="cuadros__h2">
             Proyectos.
@@ -122,6 +124,7 @@
           <img class="cuadros__fotos" src="img/25115.jpg" alt="imagenes ramdom" >
         </div>
     </div>
+    </section>
 
     <section class="seccion" id="Formsection">
       <div class="contenedorTotal-formulario">
@@ -159,20 +162,14 @@
              <input class="formulario__input" type="text" id="email" placeholder="Correo electronico"required>
            </div>
 
-          
 
            <div class="formulario__div">
              <label for="mensaje">mensaje</label>
              <textarea id="mensaje" class="formulario__textarea" placeholder="Tu mensaje" required></textarea>
            </div>
-
-          
-
            <div>
              <input class="formulario__input item--boton-sr" type="reset">
            </div>
-
-
            <div>
              <input class="formulario__input item--boton-sr" type="submit">
            </div>
