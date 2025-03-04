@@ -23,6 +23,10 @@
     color: rgb(255, 255, 255);
     margin: 3px 0;
   }
+
+  .inicio__p{
+    font-size: 1.5rem;
+  }
   .social{
     display: flex;
     gap: 15px;

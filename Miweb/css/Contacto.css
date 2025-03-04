@@ -1,111 +1,252 @@
-#Formsection {
-  padding: 100px 0;
-  position: relative;
-  overflow: hidden;
-  background-color: #070D0E;
-}
-.contenedorTotal-formulario{
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+.formsection {
+  width: 100%;
+  height: auto;
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
 }
 
-.contenedor2{
+.formsection__div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+}
+
+.formsection__h2 {
+  color: #fff6f6;
+  margin-bottom: 15px;
+}
+
+.formsection_p {
+  color: #fffafa;
+  margin-bottom: 20px;
+  max-width: 600px;
+}
+
+.formulario {
+  border-radius: 12px;
+  padding: 30px;
+  margin: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 400px;
+  background-color: #0b0a14;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.formulario__div {
+  width: 100%;
+  color: #fff;
+  margin: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: flex-start;
+}
+
+.formulario__input {
+  padding: 12px;
+  width: 100%;
+  outline: none;
+  border-radius: 8px;
+  background-color: #0b0a14;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.formulario__input:focus {
+  background-color: #0b0a14;
+  border-color: #709ee7;
+  box-shadow: 0 0 10px rgba(112, 158, 231, 0.3);
+}
+
+.item--boton-sr {
+  cursor: pointer;
+  background-color: transparent;
+  color: #fff;
+  width: 100%;
+  height: 45px;
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  border: 2px solid #709ee7;
+  transition: all 0.3s ease;
+}
+
+.item--boton-sr:hover {
+  background-color: #709ee7;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(112, 158, 231, 0.4);
+}
+
+.item--mensaje {
+  height: 120px;
+  resize: vertical;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .formulario {
+    width: 90%;
+    padding: 20px;
+  }
+}
+
+/* New styles added here */
+#contacto {
+  position: relative;
+  overflow: hidden;
+}
+
+#contacto::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+  z-index: -1;
+}
+
+.contacto-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 50px;
   max-width: 1200px;
   margin: 0 auto;
 }
-.contacto-info p{
+
+.contacto-info {
+  color: #fff;
+}
+
+.contacto-info p {
   font-size: 1.1rem;
   line-height: 1.8;
   margin-bottom: 40px;
 }
 
-.contact-methods{
+.contact-methods {
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
-.section-title{
-  margin-bottom: 50px;
-  font-size: 2rem;
+
+.contact-method {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
-.contacto-info{
-  color: #fff6f6;
+.contact-method i {
+  font-size: 1.5rem;
+  color: #709ee7;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0b0a14;
+  border-radius: 50%;
 }
-  
-  .section-title{
-    color: #fff6f6;
-  }
-  .Contacto_p{
-    color: #fffafa;
-  }
-  .formulario{
-    border-radius: 8px;
-    padding: 25px;
-    margin: 25px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    width: 350px;
-    height: 400px;
-    box-shadow: inset 0 0 10px #292828;
-  }
-  .formulario__div {
-    width: 100%;
-    color: #fff;
-    margin: 5px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    align-items: flex-start
-  }
-  .formulario__input{
-    padding: 0.5rem;
-    width: 100%;
-    outline: none;
-    border-radius: 10px;
-    opacity: 0.5;
-  }
-  
-  .item--boton-sr {
-    cursor: pointer;
-    background-color: #fff;
-    color: #000;
-    width: 100%;
-    height: 30px;
-    padding: 5px;
-    border-radius: 4px;
-  }
-  
-  .item--boton-sr:hover {
-    background-color: #709ee7;
-    color: #fff;
-    transition: all 0.3s ease;
+
+.contact-method span {
+  font-size: 1rem;
+}
+
+.contactos__form {
+  background-color: #0b0a14;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contactos__div {
+  margin-bottom: 20px;
+}
+
+.contactos__label {
+  display: block;
+  margin-bottom: 8px;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.contactos__input,
+.contactos__textarea {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: #0b0a14;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contactos__input:focus,
+.contactos__textarea:focus {
+  outline: none;
+  border-color: #709ee7;
+  background-color: #0b0a14;
+  box-shadow: 0 0 10px rgba(112, 158, 231, 0.3);
+}
+
+.contactos__textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contactos__button {
+  background: linear-gradient(45deg, #5f7fbf, #709ee7);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.contactos__button:hover {
+  background: linear-gradient(45deg, #709ee7, #5f7fbf);
+  transform: translateY(-3px);
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contactos__button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .contacto-container {
+    grid-template-columns: 1fr;
   }
 
-  .formsection__div{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-    flex-direction: column;
-    align-content: center;
+  .contactos__form {
+    padding: 30px;
   }
-
-  @media screen and (max-width: 768px) {
-    .contacto-container {
-      grid-template-columns: 1fr;
-    }
-  
-    .contactos__form {
-      padding: 30px;
-    }
-  }
+}

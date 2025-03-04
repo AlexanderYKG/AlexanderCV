@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CV AlexYorki</title>
+  <title>AlexYorki</title>
   <link rel="stylesheet" href="css/Mein.css" />
   <link rel="stylesheet" href="css/normalize.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -42,10 +42,10 @@
     </section>
 
     <section id="sobre-mi" class="seccion">
-      <h2 class="sobre-mi__h2">
-        Sobre mi.&#128512;
-      </h2>
       <div class="sobre-mi__div">
+        <h2 class="sobre-mi__h2">
+          Sobre mi&#128512;
+        </h2>
        <div class="sobre-mi__divFoto"><img  class="sobre-mi__img" src="img/copiaf2Miradaloca.jpg"></div>
          <p class="sobre-mi__p">
            Soy Alexander Yorki García y actualmente soy estudiante de ingeniería electrónica en Argentina. Estoy muy entusiasmado con el mundo del desarrollo y, en particular, estoy aprendiendo tecnologías de frontend para crear experiencias web increíbles.
@@ -54,9 +54,9 @@
            Tengo conocimientos básicos en Python y estoy emocionado de seguir avanzando y explorando más en el vasto mundo del desarrollo de software.
          </p>
         
-         <h2 class="sobre-mi__h3">
-           Mis Estudios.
-         </h2>
+         <h3 class="sobre-mi__h3">
+           Mis Estudios
+         </h3>
          <ul class="sbm-lista">
            <li class="sbm-lista__li" > Alejandro Volta. Colegio Especializado en Electronica. 2019-2025</li>
            <li class="sbm-lista__li">
@@ -103,33 +103,74 @@
       </div>
     </section>
 
-    <section id="Proyectos" class="seccion">
-      <div id="cuadros-proyecto" class="cuadros">
-        <div class="cuadros__divh2">
-          <h2 class="cuadros__h2">
-            Proyectos.
-          </h2>
-        </div>
-        <div class="cuadros__item item--c1">
-          <img class="cuadros__fotos" src="img/25115.jpg" alt="imagens ramdom" >
+    <section id="proyectos" class="seccion">
+      <div class="container">
+        <h2 class="section-title">Proyectos</h2>
+        <div class="proyectos-container">
+          <article class="proyecto">
+            <div class="proyecto-img">
+              <img src="https://via.placeholder.com/600x400" alt="Proyecto 1">
+            </div>
+            <div class="proyecto-content">
+              <h3>E-commerce Moderno</h3>
+              <p>Tienda online completa con carrito de compras, sistema de pagos y panel de administración.</p>
+              <div class="proyecto-tags">
+                <span class="tag">React</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">MongoDB</span>
+              </div>
+              <div class="proyecto-links">
+                <a href="#" class="proyecto-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                <a href="#" class="proyecto-link"><i class="fab fa-github"></i> Código</a>
+              </div>
+            </div>
+          </article>
           
-        </div>
-
-        <div class="cuadros__item item--c2">
-          <img class="cuadros__fotos" src="img/25115.jpg" alt="imaganes ramdom" >
+          <article class="proyecto">
+            <div class="proyecto-img">
+              <img src="https://via.placeholder.com/600x400" alt="Proyecto 2">
+            </div>
+            <div class="proyecto-content">
+              <h3>Dashboard Analytics</h3>
+              <p>Panel de control interactivo para visualización de datos con gráficos y reportes en tiempo real.</p>
+              <div class="proyecto-tags">
+                <span class="tag">JavaScript</span>
+                <span class="tag">Chart.js</span>
+                <span class="tag">Firebase</span>
+              </div>
+              <div class="proyecto-links">
+                <a href="#" class="proyecto-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                <a href="#" class="proyecto-link"><i class="fab fa-github"></i> Código</a>
+              </div>
+            </div>
+          </article>
           
+          <article class="proyecto">
+            <div class="proyecto-img">
+              <img src="https://via.placeholder.com/600x400" alt="Proyecto 3">
+            </div>
+            <div class="proyecto-content">
+              <h3>App de Fitness</h3>
+              <p>Aplicación web para seguimiento de rutinas de ejercicio, nutrición y progreso personal.</p>
+              <div class="proyecto-tags">
+                <span class="tag">React</span>
+                <span class="tag">Redux</span>
+                <span class="tag">Express</span>
+              </div>
+              <div class="proyecto-links">
+                <a href="#" class="proyecto-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                <a href="#" class="proyecto-link"><i class="fab fa-github"></i> Código</a>
+              </div>
+            </div>
+          </article>
         </div>
-
-        <div class="cuadros__item item--c3">
-          <img class="cuadros__fotos" src="img/25115.jpg" alt="imagenes ramdom" >
-        </div>
-    </div>
+      </div>
     </section>
 
-    <section class="seccion" id="Formsection">
-      <div class="contenedorTotal-formulario">
-        <h2 class="section-title">Contacto.</h2>
-        <div class="contenedor2">
+    <section id="contacto" class="seccion">
+      <div class="container">
+        <h2 class="section-title">Contacto</h2>
+        <div class="contacto-container">
           <div class="contacto-info">
             <p>¿Interesado en trabajar juntos? Envíame un mensaje y conversemos sobre tu proyecto.</p>
             
@@ -149,38 +190,65 @@
             </div>
           </div>
           
-          <form class="formulario">
-        
-            <div class="formulario__div">
-              <label for="name">Nombre</label>
-              <input class="formulario__input" type="text"  id="Nombre"  placeholder="Nombre Completo"required>
+          <form id="contact-form" class="contactos__form">
+            <div class="contactos__div">
+              <label for="nombre" class="contactos__label">Nombre</label>
+              <input type="text" id="nombre" class="contactos__input" placeholder="Tu nombre" required>
             </div>
-
-          
-           <div class="formulario__div">
-             <label for="email">Correo</label>
-             <input class="formulario__input" type="text" id="email" placeholder="Correo electronico"required>
-           </div>
-
-
-           <div class="formulario__div">
-             <label for="mensaje">mensaje</label>
-             <textarea id="mensaje" class="formulario__textarea" placeholder="Tu mensaje" required></textarea>
-           </div>
-           <div>
-             <input class="formulario__input item--boton-sr" type="reset">
-           </div>
-           <div>
-             <input class="formulario__input item--boton-sr" type="submit">
-           </div>
+            
+            <div class="contactos__div">
+              <label for="email" class="contactos__label">Email</label>
+              <input type="email" id="email" class="contactos__input" placeholder="Tu email" required>
+            </div>
+            
+            <div class="contactos__div">
+              <label for="asunto" class="contactos__label">Asunto</label>
+              <input type="text" id="asunto" class="contactos__input" placeholder="Asunto del mensaje" required>
+            </div>
+            
+            <div class="contactos__div">
+              <label for="mensaje" class="contactos__label">Mensaje</label>
+              <textarea id="mensaje" class="contactos__textarea" placeholder="Tu mensaje" required></textarea>
+            </div>
+            
+            <button type="submit" class="contactos__button">Enviar mensaje</button>
           </form>
         </div>
       </div>
     </section>
-    <footer>
-      <p>Made with ❤️ by AlexYK</p>
-    </footer>
   </main>
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h3>Portfolio</h3>
+          <p>Desarrollando experiencias digitales excepcionales</p>
+        </div>
+        <div class="footer-links">
+          <h4>Enlaces</h4>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Conéctate</h4>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2025</span> Portfolio Profesional. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
