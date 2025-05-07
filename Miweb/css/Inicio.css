@@ -21,7 +21,7 @@
     font-weight: 800;
     font-size: 3.5rem;
     color: rgb(255, 255, 255);
-    margin: 3px 0;
+    margin: 1px 0;
   }
 
   .inicio__p{
@@ -68,7 +68,7 @@
 
   @media screen and (max-width: 768px) {
     .inicio__h1 {
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
     
     #inicio h2 {
@@ -86,5 +86,8 @@
     
     .social {
       flex-wrap: wrap;
+    }
+    .social-btn{
+      font-size: 0.8rem;
     }
   }

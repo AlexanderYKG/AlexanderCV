@@ -9,7 +9,12 @@
   display: inline-block; /* Convertir los enlaces en elementos en línea con dimensiones */
   line-height: 1; /* Ajustar la altura de línea para centrar verticalmente */
 }
-
+@media (max-width: 600px) {
+  .bf {
+      margin-right: -13px;
+      padding: 10px 10px; /* Ajusta el espacio interno del botón */
+  }
+}
 /* Estilo del círculo detrás del botón */
 .bf:before {
   content: "";

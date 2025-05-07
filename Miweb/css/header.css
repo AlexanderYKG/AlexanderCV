@@ -1,10 +1,50 @@
 header {
+    border: 2px solid #ffffff;
     background-color: rgba(51, 51, 51, 0.5);
     color: #fff;
-    padding: 15px 5%;
+    padding: 15px 1%;
     position: fixed;
-    width: 100%;
-    top: 0;
+    width: 30%; /* Cambia el ancho al 90% de la página */
+     /* Opcional: establece un máximo para pantallas grandes */
+    top: 10px;
+    left: 50%; /* Posiciona el borde izquierdo en el centro */
+    transform: translateX(-50%); /* Centra el elemento */
     z-index: 1000;
     backdrop-filter: blur(10px);
+    border-radius: 30px;
+}
+
+
+@media (max-width: 1450px) {
+    header {
+        width: 100%; /* Ancho completo para tablets */
+        left: 0; /* Elimina la posición centrada */
+        transform: none; /* No se necesita centrar con transform */
+        border-radius: 0; /* Opcional: elimina bordes redondeados para tablets */
+        top: 0;
+    }
+}
+
+@media (max-width: 1024px) {
+    header {
+        border: none;
+        width: 100%; /* Ancho completo para tablets */
+        left: 0; /* Elimina la posición centrada */
+        transform: none; /* No se necesita centrar con transform */
+        border-radius: 0; /* Opcional: elimina bordes redondeados para tablets */
+        top: 0;
+    }
+}
+
+/* Media Query para teléfonos */
+@media (max-width: 600px) {
+    header {
+        border: none;
+        width: 100%; /* Ancho completo para teléfonos */
+        left: 0; /* Elimina la posición centrada */
+        transform: none; /* No se necesita centrar con transform */
+        border-radius: 0; /* Opcional: elimina bordes redondeados para teléfonos */
+        padding: 10px 15px; /* Ajusta el padding para pantallas más pequeñas */
+        top: 0;
+    }
 }
