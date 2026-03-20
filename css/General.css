@@ -5,11 +5,11 @@
 }
 
 body {
-  font-family: 'Poppins', 'Arial', sans-serif;
+  font-family: 'Inter', 'Arial', sans-serif;
   line-height: 1.6;
-  color: #333;
+  color: #e5e7eb;
   overflow-x: hidden;
-  background-color: #0a0a14;
+  background-color: #020617;
 }
 
 .container {
@@ -25,7 +25,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 20px;
-  color: #fff;
+  color: #e5e7eb;
   font-weight: 700;
 }
 
@@ -58,16 +58,16 @@ input, textarea, button {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0a0a14;
+  background: #020617;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #709ee7;
+  background: #0ea5e9;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #5a7dbc;
+  background: #0284c7;
 }
 
 /* Utility Classes */

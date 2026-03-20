@@ -1,6 +1,6 @@
 footer {
-  background-color: #151515;
-  color: #fff;
+  background-color: #0f172a;
+  color: #e5e7eb;
   padding: 70px 0 20px;
 }
 
@@ -23,7 +23,7 @@ footer {
 }
 
 .footer-links h4, .footer-social h4 {
-  color: #709ee7;
+  color: #0ea5e9;
   margin-bottom: 20px;
   font-size: 1.2rem;
 }
@@ -43,7 +43,7 @@ footer {
 }
 
 .footer-links ul li a:hover {
-  color: #709ee7;
+  color: #0ea5e9;
 }
 
 .social-icons {
@@ -64,7 +64,7 @@ footer {
 }
 
 .social-icons a:hover {
-  background-color: #709ee7;
+  background-color: #0ea5e9;
   transform: translateY(-3px);
 }
 

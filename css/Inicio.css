@@ -6,7 +6,9 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    background: radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.22), transparent 45%),
+                 radial-gradient(circle at 85% 25%, rgba(237, 117, 22, 0.18), transparent 45%),
+                 linear-gradient(180deg, #020617 0%, #020617 100%);
   }
   
   .inicio__div {
@@ -52,7 +54,7 @@
   }
   
   button {
-    background-color: #0077cc;
+    background-color: #0284c7;
     color: white;
     border: none;
     padding: 12px 25px;
@@ -63,7 +65,7 @@
   }
   
   button:hover {
-    background-color: #005fa3;
+    background-color: #0ea5e9;
   }
 
   @media screen and (max-width: 768px) {

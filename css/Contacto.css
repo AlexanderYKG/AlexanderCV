@@ -39,7 +39,7 @@
   align-content: center;
   align-items: center;
   width: 400px;
-  background-color: #0b0a14;
+  background-color: #0f172a;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
@@ -62,16 +62,16 @@
   width: 100%;
   outline: none;
   border-radius: 8px;
-  background-color: #0b0a14;
+  background-color: #0f172a;
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: #fff;
   transition: all 0.3s ease;
 }
 
 .formulario__input:focus {
-  background-color: #0b0a14;
-  border-color: #709ee7;
-  box-shadow: 0 0 10px rgba(112, 158, 231, 0.3);
+  background-color: #0f172a;
+  border-color: #0ea5e9;
+  box-shadow: 0 0 10px rgba(14, 165, 233, 0.35);
 }
 
 .item--boton-sr {
@@ -84,15 +84,15 @@
   padding: 10px;
   border-radius: 8px;
   font-weight: bold;
-  border: 2px solid #709ee7;
+  border: 2px solid #0ea5e9;
   transition: all 0.3s ease;
 }
 
 .item--boton-sr:hover {
-  background-color: #709ee7;
+  background-color: #0ea5e9;
   color: #fff;
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(112, 158, 231, 0.4);
+  box-shadow: 0 5px 15px rgba(14, 165, 233, 0.35);
 }
 
 .item--mensaje {
@@ -157,13 +157,13 @@
 
 .contact-method i {
   font-size: 1.5rem;
-  color: #709ee7;
+  color: #0ea5e9;
   width: 40px;
   height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #0b0a14;
+  background-color: #0f172a;
   border-radius: 50%;
 }
 
@@ -172,7 +172,7 @@
 }
 
 .contactos__form {
-  background-color: #0b0a14;
+  background-color: #0f172a;
   padding: 40px;
   border-radius: 10px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
@@ -195,7 +195,7 @@
 .contactos__textarea {
   width: 100%;
   padding: 12px 15px;
-  background-color: #0b0a14;
+  background-color: #0f172a;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 5px;
   color: #fff;
@@ -206,9 +206,9 @@
 .contactos__input:focus,
 .contactos__textarea:focus {
   outline: none;
-  border-color: #709ee7;
-  background-color: #0b0a14;
-  box-shadow: 0 0 10px rgba(112, 158, 231, 0.3);
+  border-color: #0ea5e9;
+  background-color: #0f172a;
+  box-shadow: 0 0 10px rgba(14, 165, 233, 0.35);
 }
 
 .contactos__textarea {
@@ -217,7 +217,7 @@
 }
 
 .contactos__button {
-  background: linear-gradient(45deg, #5f7fbf, #709ee7);
+  background: linear-gradient(45deg, #0284c7, #0ea5e9);
   color: white;
   border: none;
   padding: 12px 30px;
@@ -230,7 +230,7 @@
 }
 
 .contactos__button:hover {
-  background: linear-gradient(45deg, #709ee7, #5f7fbf);
+  background: linear-gradient(45deg, #0ea5e9, #0284c7);
   transform: translateY(-3px);
   box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2);
 }
