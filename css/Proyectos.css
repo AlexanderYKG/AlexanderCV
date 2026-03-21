@@ -78,6 +78,17 @@
   margin-bottom: 20px;
 }
 
+.proyectos-h2 {
+  color: #e5e7eb;
+    text-align: center;
+    margin: 0 auto 30px auto;
+    position: relative;
+    display: block;
+    width: fit-content;
+    padding-bottom: 10px;
+
+}
+
 .tag {
   background-color: rgba(255, 255, 255, 0.1);
   color: rgba(255, 255, 255, 0.9);

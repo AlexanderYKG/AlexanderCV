@@ -1,0 +1,276 @@
+/* ════════════════════════════════════════
+   FormacionAcademica.css
+   Estilo elegante adaptado al portfolio
+   ════════════════════════════════════════ */
+
+   #formacion-academica {
+    background-color: #020617;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #formacion-academica::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    
+    opacity: 0.9;
+    z-index: 0;
+  }
+  
+  #formacion-academica .container {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* ── Título ── */
+  .formacion__h2 {
+    color: #e5e7eb;
+    text-align: center;
+    margin: 0 auto 50px auto;
+    position: relative;
+    display: block;
+    width: fit-content;
+    padding-bottom: 10px;
+  }
+  
+  /* ── Timeline contenedor ── */
+  .formacion__timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+  
+  /* Línea vertical: gradiente azul igual que el acento del portfolio */
+  .formacion__timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 8px;
+    bottom: 8px;
+    width: 1px;
+    background: linear-gradient(to bottom, #0ea5e9, rgba(14, 165, 233, 0.15) 80%, transparent);
+    z-index: 0;
+  }
+  
+  /* ── Card ── */
+  .formacion__card {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 0 24px;
+    padding: 0 0 36px 0;
+    position: relative;
+    opacity: 0;
+    transform: translateY(24px);
+    animation: formacionFadeUp 0.55s forwards;
+  }
+  
+  .formacion__card:nth-child(1) { animation-delay: 0.1s; }
+  .formacion__card:nth-child(2) { animation-delay: 0.25s; }
+  .formacion__card:nth-child(3) { animation-delay: 0.4s; }
+  .formacion__card:last-child   { padding-bottom: 0; }
+  
+  @keyframes formacionFadeUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* ── Dot ── */
+  .formacion__dot-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 22px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .formacion__dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #020617;
+    border: 2px solid #0ea5e9;
+    flex-shrink: 0;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .formacion__card:hover .formacion__dot {
+    background-color: #0ea5e9;
+    box-shadow: 0 0 12px rgba(14, 165, 233, 0.5);
+  }
+  
+  /* ── Contenido (card estilo portfolio + elegancia del diseño original) ── */
+  .formacion__content {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 24px 28px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    margin-bottom: 8px;
+  }
+  
+  /* Shimmer azul al hover (igual al efecto dorado del original) */
+  .formacion__content::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(14, 165, 233, 0.06);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .formacion__card:hover .formacion__content {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+    border-color: rgba(14, 165, 233, 0.35);
+  }
+  
+  .formacion__card:hover .formacion__content::before {
+    opacity: 1;
+  }
+  
+  /* ── Header de la card ── */
+  .formacion__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 6px;
+    position: relative;
+  }
+  
+  .formacion__titulo {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #e5e7eb;
+    line-height: 1.3;
+    margin: 0;
+  }
+  
+  /* ── Badges ── */
+  .formacion__badge {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 3px 11px;
+    border-radius: 20px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  
+  .formacion__badge--cursando {
+    background-color: rgba(14, 165, 233, 0.12);
+    color: #38bdf8;
+    border: 1px solid rgba(14, 165, 233, 0.3);
+  }
+  
+  .formacion__badge--completado {
+    background-color: rgba(34, 197, 94, 0.1);
+    color: #4ade80;
+    border: 1px solid rgba(34, 197, 94, 0.25);
+  }
+  
+  /* ── Institución ── */
+  .formacion__institucion {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: #0ea5e9;
+    margin: 0 0 8px 0;
+    position: relative;
+  }
+  
+  .formacion__institucion i {
+    margin-right: 6px;
+    font-size: 0.8rem;
+  }
+  
+  /* ── Meta (fecha, modalidad) ── */
+  .formacion__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.45);
+    margin-bottom: 14px;
+    position: relative;
+  }
+  
+  .formacion__meta span::before {
+    content: '·';
+    margin: 0 8px;
+    color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .formacion__meta span:first-child::before {
+    display: none;
+  }
+  
+  /* ── Descripción ── */
+  .formacion__descripcion {
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.7;
+    margin: 0 0 16px 0;
+    position: relative;
+  }
+  
+  /* ── Tags (reutiliza .tag de Proyectos.css con ajuste en hover) ── */
+  .formacion__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    position: relative;
+  }
+  
+  .formacion__tags .tag {
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  
+  .formacion__card:hover .formacion__tags .tag {
+    background-color: rgba(14, 165, 233, 0.08);
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  /* ── Responsive ── */
+  @media screen and (max-width: 914px) {
+    .formacion__card {
+      grid-template-columns: 48px 1fr;
+      gap: 0 16px;
+    }
+    .formacion__content {
+      padding: 20px;
+    }
+    .formacion__titulo {
+      font-size: 1.05rem;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .formacion__timeline::before {
+      left: 14px;
+    }
+    .formacion__card {
+      grid-template-columns: 38px 1fr;
+      gap: 0 12px;
+    }
+    .formacion__header {
+      flex-direction: column;
+      gap: 8px;
+    }
+    .formacion__meta {
+      gap: 0;
+    }
+    .formacion__content {
+      padding: 16px;
+    }
+  }
