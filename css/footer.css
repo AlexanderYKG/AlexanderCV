@@ -80,6 +80,13 @@ footer {
 }
 
 /* Responsive adjustments */
+@media screen and (max-width: 914px) {
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .footer-content {
     grid-template-columns: 1fr;

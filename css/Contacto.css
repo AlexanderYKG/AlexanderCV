@@ -241,6 +241,16 @@
 }
 
 /* Responsive adjustments */
+@media screen and (max-width: 914px) {
+  .contacto-container {
+    gap: 30px;
+  }
+
+  .contactos__form {
+    padding: 30px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .contacto-container {
     grid-template-columns: 1fr;

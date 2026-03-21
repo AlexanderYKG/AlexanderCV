@@ -44,7 +44,7 @@ header {
         left: 0; /* Elimina la posición centrada */
         transform: none; /* No se necesita centrar con transform */
         border-radius: 0; /* Opcional: elimina bordes redondeados para teléfonos */
-        padding: 10px 15px; /* Ajusta el padding para pantallas más pequeñas */
+        padding: 8px 8px; /* Ajusta el padding para pantallas más pequeñas */
         top: 0;
     }
 }

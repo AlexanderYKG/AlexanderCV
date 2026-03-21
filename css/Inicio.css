@@ -15,8 +15,9 @@
     color: #ffffff;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
+    text-align: center;
   }
   
   .inicio__h1{
@@ -27,12 +28,13 @@
   }
 
   .inicio__p{
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   .social{
     display: flex;
     gap: 15px;
-    margin-top: 30px;
+    margin-top: 45px;
+    justify-content: center;
   }
   .social-btn {
     display: inline-flex;
@@ -68,28 +70,52 @@
     background-color: #0ea5e9;
   }
 
+  @media screen and (max-width: 914px) {
+    #inicio {
+      min-height: 100vh;
+      padding: 24px 16px;
+    }
+
+    .inicio__h1 {
+      font-size: 2.8rem;
+    }
+
+    .inicio__p {
+      max-width: 640px;
+      font-size: 1rem;
+      line-height: 1.45;
+    }
+
+    .social {
+      gap: 12px;
+      margin-top: 24px;
+    }
+  }
+
   @media screen and (max-width: 768px) {
     .inicio__h1 {
-      font-size: 2rem;
+      font-size: 2.1rem;
     }
-    
-    #inicio h2 {
-      font-size: 1.4rem;
+
+    .inicio__div {
+      padding: 0 16px;
     }
-    
+
     .inicio__p {
-      font-size: 1rem;
+      margin-top: 40px;
+      font-size: 1.05rem;
+      line-height: 1.4;
+
     }
-    
-    .cta-buttons {
-      flex-direction: column;
-      gap: 15px;
-    }
-    
+
     .social {
       flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 50px;
     }
+
     .social-btn{
-      font-size: 0.8rem;
+      font-size: 0.85rem;
+      padding: 9px 14px;
     }
   }

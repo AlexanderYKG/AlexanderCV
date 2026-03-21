@@ -9,6 +9,15 @@
   display: inline-block; /* Convertir los enlaces en elementos en línea con dimensiones */
   line-height: 1; /* Ajustar la altura de línea para centrar verticalmente */
 }
+
+@media (max-width: 914px) {
+  .bf {
+    padding: 9px 10px;
+    margin-right: 4px;
+    font-size: 0.92rem;
+  }
+}
+
 @media (max-width: 600px) {
   .bf {
       margin-right: -13px;

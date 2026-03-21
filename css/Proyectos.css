@@ -112,6 +112,17 @@
 }
 
 /* Responsive adjustments */
+@media screen and (max-width: 914px) {
+  .proyectos-container {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  .proyecto-content {
+    padding: 20px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .proyectos-container {
     grid-template-columns: 1fr;

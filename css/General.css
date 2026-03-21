@@ -29,6 +29,13 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
+
+
+h2 {
+  font-size: 1.875rem;
+}
+
+
 a {
   text-decoration: none;
   color: inherit;
@@ -88,6 +95,28 @@ input, textarea, button {
 .mb-5 { margin-bottom: 2.5rem; }
 
 /* Media Queries */
+@media screen and (max-width: 914px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .seccion {
+    padding: 85px 0;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  h2 {
+    font-size: 1.875rem;
+  }
+
+  h3 {
+    font-size: 1.35rem;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .seccion {
     padding: 80px 0;
@@ -98,27 +127,11 @@ input, textarea, button {
   }
   
   h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
-}
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  h1 {
-    font-size: 2.8rem;
-  }
-  
-  h2 {
-    font-size: 2.2rem;
-  }
-}
-
-@media screen and (min-width: 1025px) {
-  h1 {
-    font-size: 3.5rem;
-  }
-  
-  h2 {
-    font-size: 2.5rem;
+  h3 {
+    font-size: 1.2rem;
   }
 }
   
