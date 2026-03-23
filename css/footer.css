@@ -5,10 +5,13 @@ footer {
 }
 
 .footer-content {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 50px;
-  margin-bottom: 40px;
+  .footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 columnas iguales */
+    gap: 50px;
+    margin-bottom: 40px;
+    align-items: start;
+  }
 }
 
 .footer-logo h3 {
@@ -46,6 +49,12 @@ footer {
   color: #0ea5e9;
 }
 
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
 .social-icons {
   display: flex;
   gap: 15px;
@@ -68,6 +77,29 @@ footer {
   transform: translateY(-3px);
 }
 
+.footer-cv-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: linear-gradient(to right, #0ea5e9, #06b6d4);
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.footer-cv-btn:hover {
+  background: linear-gradient(to right, #0284c7, #0891b2);
+  transform: translateY(-2px);
+}
+
+.footer-cv-btn i {
+  font-size: 1rem;
+}
+
 .footer-bottom {
   text-align: center;
   padding-top: 20px;
@@ -79,7 +111,6 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Responsive adjustments */
 @media screen and (max-width: 914px) {
   .footer-content {
     grid-template-columns: 1fr 1fr;
@@ -92,7 +123,7 @@ footer {
     grid-template-columns: 1fr;
     gap: 30px;
   }
-  
+
   footer {
     padding: 50px 0 20px;
   }
