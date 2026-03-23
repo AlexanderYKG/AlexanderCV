@@ -85,7 +85,7 @@
 
 .experiencia-profesional__cardNombre {
   color: #fff;
-  font-size: 1rem;
+  font-size: 1.15rem;
   margin: 0;
 }
 
@@ -152,4 +152,14 @@
   .experiencia-profesional__cardInfo {
     align-items: center;
   }
+}
+
+
+
+.experiencia-profesional__p{
+  font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.7;
+    margin: 0 0 16px 0;
+    position: relative;
 }

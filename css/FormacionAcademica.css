@@ -123,7 +123,6 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(14, 165, 233, 0.06);
     opacity: 0;
     transition: opacity 0.3s ease;
   }
@@ -182,7 +181,7 @@
   
   /* ── Institución ── */
   .formacion__institucion {
-    font-size: 0.88rem;
+    font-size: 0.85rem;
     font-weight: 500;
     color: #0ea5e9;
     margin: 0 0 8px 0;

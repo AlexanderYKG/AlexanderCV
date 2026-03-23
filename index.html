@@ -11,6 +11,32 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
+<script>
+  function abrirModal(pdfUrl) {
+    const modal = document.getElementById('certificado__modal');
+    const iframe = document.getElementById('modal__iframe');
+    iframe.src = pdfUrl;
+    modal.classList.add('activo');
+    document.body.style.overflow = 'hidden'; // evita scroll de fondo
+  }
+
+  function cerrarModal(event) {
+    // Si se hace click fuera del contenido o en el botón cerrar
+    if (!event || event.target === document.getElementById('certificado__modal')) {
+      const modal = document.getElementById('certificado__modal');
+      const iframe = document.getElementById('modal__iframe');
+      modal.classList.remove('activo');
+      iframe.src = ''; // libera el PDF de memoria
+      document.body.style.overflow = '';
+    }
+  }
+
+  // Cerrar con la tecla Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') cerrarModal();
+  });
+</script>
+
 <body>
   <header>
     <nav class="botones-principales">
@@ -34,8 +60,8 @@
 
       <div class="social">
         <a href="https://goo.su/quf7j1L" target="_blank" class="social-btn"><i class="fab fa-github"></i> GitHub</a>
-        <a href="#" class="social-btn" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-        <a href="https://goo.su/AwtUX" target="_blank" class="social-btn"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="https://www.linkedin.com/in/alexanderyk?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" class="social-btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="mailto:alexanderyorki@icloud.com" class="social-btn"><i class="fas fa-envelope"></i> Correo</a>
       </div>
     </section>
 
@@ -51,7 +77,7 @@
             <div class="experiencia-profesional__cardInfo">
               <h3 class="experiencia-profesional__cardNombre">MYEEL - Auxiliar de Laboratorio en Metrologia</h3>
               <p class="experiencia-profesional__cardFecha"><span style="color: #0ea5e9;">Contrato de practicas</span> may. 2025 - jul. 2025</p>
-              <p> Empresa argentina con más de 46 años de experiencia en la provisión de tecnología para redes de distribución eléctrica, agua, gas y energías renovables.</p>
+              <p class="experiencia-profesional__p"> Empresa argentina con más de 46 años de experiencia en la provisión de tecnología para redes de distribución eléctrica, agua, gas y energías renovables.</p>
             </div>
           </article>
 
@@ -62,7 +88,7 @@
             <div class="experiencia-profesional__cardInfo">
               <h3 class="experiencia-profesional__cardNombre">EXO S.A.- Tecnico auxiliar</h3>
               <p class="experiencia-profesional__cardFecha"><span style="color: #0ea5e9;">Contrato de practicas</span> agost. 2025 - nov. 2025</p>
-              <p>Empresa argentina fundada en 1978, que se dedica a la producción de equipos electrónicos y soluciones tecnológicas.</p>
+              <p class="experiencia-profesional__p">Empresa argentina fundada en 1978, que se dedica a la producción de equipos electrónicos y soluciones tecnológicas.</p>
             </div>
           </article>
         </div>
@@ -85,15 +111,13 @@
                 <h3 class="formacion__titulo">Ingeniería en Informática</h3>
                 <span class="formacion__badge formacion__badge--cursando">Cursando</span>
               </div>
-              <p class="formacion__institucion"><i class="fas fa-university"></i> Tu universidad acá</p>
+              <p class="formacion__institucion"><i class="fas fa-university"></i> Universidad de Buenos Aires UBA.</p>
               <div class="formacion__meta">
-                <span>2023 — Presente</span>
+                <span>Presente</span>
                 <span>Presencial</span>
                 <span>Buenos Aires</span>
               </div>
-              <p class="formacion__descripcion">
-                Formación en diseño y desarrollo de sistemas, con énfasis en algoritmos, arquitecturas de software y redes.
-              </p>
+  
               <div class="formacion__tags">
                 <span class="tag">Algoritmos</span>
                 <span class="tag">Bases de datos</span>
@@ -112,14 +136,14 @@
                 <h3 class="formacion__titulo">Técnico en Electrónica</h3>
                 <span class="formacion__badge formacion__badge--completado">Completado</span>
               </div>
-              <p class="formacion__institucion"><i class="fas fa-school"></i> Tu escuela técnica acá</p>
+              <p class="formacion__institucion"><i class="fas fa-school"></i>Esc. Técnica N° 19 - Alejandro Volta.</p>
               <div class="formacion__meta">
-                <span>2017 — 2022</span>
-                <span>Presencial · Título oficial</span>
+                <span>2020 — 2025</span>
+                <span>Título oficial</span>
                 <span>Buenos Aires</span>
               </div>
               <p class="formacion__descripcion">
-                Título técnico con formación en circuitos electrónicos, microcontroladores, IoT y desarrollo de firmware embebido.
+                Título técnico en electronica con formación en circuitos electrónicos, telecomunicaciones, microcontroladores, IoT y desarrollo de firmware embebido.
               </p>
               <div class="formacion__tags">
                 <span class="tag">Microcontroladores</span>
@@ -133,36 +157,126 @@
         </div>
       </div>
     </section>
+    
+ <!-- ── Certificaciones ── -->
+<section id="certificaciones" class="seccion">
+  <div class="container">
+    <h2 class="certificaciones__h2">Certificaciones</h2>
+    <div class="certificaciones__cards">
 
-    <section id="Habilidades" class="seccion">
-      <div class="contenedor-Habilidades">
-        <div class="div_h2">
-          <h2 class="Habilidades_h2">Habilidades</h2>
+      <article id="certificacion__card-1" class="certificaciones__card" onclick="abrirModal('pdfs/Omada_Certificate_Template_A4_OCNA_Wireless_Alexander_Yorki_Garcia.pdf')">
+        <div class="certificacion__overlay">
+          <span>Ver certificado</span>
         </div>
-        <div class="skills-container-items">
-          <div class="skill-item"><i class="fab fa-html5"></i><span>HTML5</span></div>
-          <div class="skill-item"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
-          <div class="skill-item"><i class="fab fa-js"></i><span>JavaScript</span></div>
-          <div class="skill-item"><i class="fab fa-python"></i><span>Python</span></div>
-          <div class="skill-item"><i class="fas fa-mobile-alt"></i><span>Responsive</span></div>
+        <div class="certificacion__cardFoto">
+          <img class="certificaciones__cardImg" src="pngs\tp-link.png" alt="Logo TP-Link">
+          
         </div>
+        <div class="certificaciones__contenido">
+          <h3>Omada Certified Network Administrator (OCNA) Wireless</h3>
+          <p>TP-Link</p>
+          <span>Expedición: jun. 2025 · Vencimiento: jun. 2028</span>
+        </div>
+      </article>
+
+      <article id="certificacion__card-2" class="certificaciones__card" onclick="abrirModal('pdfs/Alexander_Yorki_Garcia.pdf')">
+        <div class="certificacion__overlay">
+          <span>Ver certificado</span>
+        </div>
+        
+        <div class="certificacion__cardFoto">
+          <img class="certificaciones__cardImg" src="pngs\mercado-libre-argentina.png" alt="Logo de Mercado Libre">
+          
+        </div>
+        <div class="certificaciones__contenido">
+          <h3>Web Basics 01 Digital Skills Diploma</h3>
+          <p>Mercado Libre</p>
+          <span>Expedición: abr. 2024</span>
+        </div>
+      </article>
+
+      <article id="certificacion__card-3" class="certificaciones__card" onclick="abrirModal('pdfs/Certificado_AP.pdf')">
+        <div class="certificacion__overlay">
+          <span>Ver certificado</span>
+        </div>
+        <div class="certificacion__cardFoto" >
+          <img class="certificaciones__cardImg" src="pngs\buenos-aires-city-government.png" alt="Logo de Mercado Libre">
+        </div>
+        <div class="certificaciones__contenido">
+          <h3>Desarrollo con Python</h3>
+          <p>Gobierno de la Ciudad de Buenos Aires</p>
+          <span>Expedición: dic. 2023</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Modal ── -->
+<div id="certificado__modal" class="modal" onclick="cerrarModal(event)">
+  <div class="modal__contenido">
+    <button class="modal__cerrar" onclick="cerrarModal()">✕</button>
+    <iframe id="modal__iframe" src="" frameborder="0"></iframe>
+  </div>
+</div>
+
+
+<section id="Habilidades" class="seccion">
+  <div class="contenedor-Habilidades">
+    <div class="div_h2">
+      <h2 class="Habilidades_h2">Tecnologias</h2>
+    </div>
+    <div class="skills-track-wrapper">
+      <div class="skills-container-items">
+
+        <!-- Items originales -->
+        <div class="skill-item"><i class="fab fa-html5" id="HTML5"></i><span>HTML5</span></div>
+        <div class="skill-item"><i class="fab fa-css3-alt" id="CSS"></i><span>CSS3</span></div>
+        <div class="skill-item"><i class="fab fa-js" id="JS"></i><span>JavaScript</span></div>
+        <div class="skill-item"><i class="fab fa-python" id="PY"></i><span>Python</span></div>
+        <div class="skill-item"><i class="fas fa-database" id="SQL"></i><span>SQL</span></div>
+        <div class="skill-item"><i class="fab fa-git-alt" id="GIT"></i><span>Git</span></div>
+        <div class="skill-item"><i class="fab fa-github" id="GITH"></i><span>GitHub</span></div>
+        <div class="skill-item"><i class="fas fa-microchip" id="ARD"></i><span>PlatformIO IoT</span></div>
+        <div class="skill-item"><i class="fas fa-copyright" id="C"></i><span>C / C++</span></div>
+
+        <!-- Duplicado para loop infinito -->
+        <div class="skill-item"><i class="fab fa-html5" id="HTML5-2"></i><span>HTML5</span></div>
+        <div class="skill-item"><i class="fab fa-css3-alt" id="CSS-2"></i><span>CSS3</span></div>
+        <div class="skill-item"><i class="fab fa-js" id="JS-2"></i><span>JavaScript</span></div>
+        <div class="skill-item"><i class="fab fa-python" id="PY-2"></i><span>Python</span></div>
+        <div class="skill-item"><i class="fas fa-database" id="SQL-2"></i><span>SQL</span></div>
+        <div class="skill-item"><i class="fab fa-git-alt" id="GIT-2"></i><span>Git</span></div>
+        <div class="skill-item"><i class="fab fa-github" id="GITH-2"></i><span>GitHub</span></div>
+        <div class="skill-item"><i class="fas fa-microchip" id="ARD-2"></i><span>PlatformIO IoT</span></div>
+        <div class="skill-item"><i class="fas fa-copyright" id="C-2"></i><span>C / C++</span></div>
+
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
     <section id="proyectos" class="seccion">
       <div class="container">
         <h2 class="proyectos-h2">Proyectos</h2>
         <div class="proyectos-container">
           <article class="proyecto">
-            <div class="proyecto-img"><img src="https://via.placeholder.com/600x400" alt="Proyecto 1"></div>
+            <div class="proyecto-img"><img src="img\25115.jpg" alt="Proyecto 1"><span class="proyecto-badge">En Refactorización</span></div>
+            
             <div class="proyecto-content">
-              <h3>E-commerce Moderno</h3>
-              <p>Tienda online completa con carrito de compras, sistema de pagos y panel de administración.</p>
-              <div class="proyecto-tags">
-                <span class="tag">React</span>
-                <span class="tag">Node.js</span>
-                <span class="tag">MongoDB</span>
-              </div>
+              <h3>Sistema de Clasificación de objetos </h3>
+              <p>Dispositivo embebido con ESP32-CAM que clasifica objetos reciclables 
+                en tiempo real mediante la API de OpenAI. Integra sensores, servomotor, 
+                pantalla OLED y audio, con comunicación vía Wi-Fi.
+                Presentado en exposición técnica.</p>
+                <div class="proyecto-tags">
+                  <span class="tag">ESP32-CAM</span>
+                  <span class="tag">OpenAI API</span>
+                  <span class="tag">C++</span>
+                  <span class="tag">Wi-Fi</span>
+                  <span class="tag">Sistema embebido</span>
+                </div>
               <div class="proyecto-links">
                 <a href="#" class="proyecto-link"><i class="fas fa-external-link-alt"></i> Demo</a>
                 <a href="#" class="proyecto-link"><i class="fab fa-github"></i> Código</a>
@@ -171,15 +285,10 @@
           </article>
 
           <article class="proyecto">
-            <div class="proyecto-img"><img src="https://via.placeholder.com/600x400" alt="Proyecto 2"></div>
+            <div class="proyecto-img"><img src="img\25115.jpg" alt="Proyecto 2"><span class="proyecto-badge">En Desarrollo</span></div>
             <div class="proyecto-content">
               <h3>Dashboard Analytics</h3>
               <p>Panel de control interactivo para visualización de datos con gráficos y reportes en tiempo real.</p>
-              <div class="proyecto-tags">
-                <span class="tag">JavaScript</span>
-                <span class="tag">Chart.js</span>
-                <span class="tag">Firebase</span>
-              </div>
               <div class="proyecto-links">
                 <a href="#" class="proyecto-link"><i class="fas fa-external-link-alt"></i> Demo</a>
                 <a href="#" class="proyecto-link"><i class="fab fa-github"></i> Código</a>
@@ -188,17 +297,22 @@
           </article>
 
           <article class="proyecto">
-            <div class="proyecto-img"><img src="https://via.placeholder.com/600x400" alt="Proyecto 3"></div>
+            <div class="proyecto-img">
+              <img src="img\25115.jpg" alt="Hacker Dot">
+              <span class="proyecto-badge">En desarrollo</span>
+            </div>
             <div class="proyecto-content">
-              <h3>App de Fitness</h3>
-              <p>Aplicación web para seguimiento de rutinas de ejercicio, nutrición y progreso personal.</p>
+              <h3>Hack Dot</h3>
+              <p>Plataforma embebida con IA integrada que genera y ejecuta código en tiempo real 
+                según los componentes conectados. Conectás un sensor, motor o LED, describís lo 
+                que querés hacer, y el asistente programa el hardware de forma autónoma.</p>
               <div class="proyecto-tags">
-                <span class="tag">React</span>
-                <span class="tag">Redux</span>
-                <span class="tag">Express</span>
+                <span class="tag">IA generativa</span>
+                <span class="tag">C++</span>
+                <span class="tag">MicroPython</span>
+                <span class="tag">Sistema embebido</span>
               </div>
               <div class="proyecto-links">
-                <a href="#" class="proyecto-link"><i class="fas fa-external-link-alt"></i> Demo</a>
                 <a href="#" class="proyecto-link"><i class="fab fa-github"></i> Código</a>
               </div>
             </div>

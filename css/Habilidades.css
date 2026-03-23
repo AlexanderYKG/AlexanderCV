@@ -1,4 +1,4 @@
-#Habilidades{
+#Habilidades {
   background-color: #020617;
 }
 
@@ -8,28 +8,45 @@
   padding: 0 20px;
 }
 
-.div_h2{
+.div_h2 {
   color: #e5e7eb;
-    text-align: center;
-    margin: 0 auto 30px auto;
-    position: relative;
-    display: block;
-    width: fit-content;
-    padding-bottom: 10px;
+  text-align: center;
+  margin: 0 auto 30px auto;
+  position: relative;
+  display: block;
+  width: fit-content;
+  padding-bottom: 10px;
 }
-.Habilidades_h2{
+
+.Habilidades_h2 {
   color: #fff;
 }
 
-.skills-container-items {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  margin: 0 auto;
-  max-width: 1200px;
+/* ── Wrapper que oculta los bordes ── */
+.skills-track-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
 
+/* ── La pista animada ── */
+.skills-container-items {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ── Cards ── */
 .skill-item {
   display: flex;
   flex-direction: column;
@@ -38,24 +55,32 @@
   padding: 20px;
   border-radius: 8px;
   width: 100px;
+  flex-shrink: 0;        /* no se achican */
   transition: transform 0.3s, background-color 0.3s;
 }
-.skill-item span{
+
+.skill-item span {
   color: #fff;
+  font-size: 0.9rem;
 }
 
 .skill-item:hover {
-  box-shadow: 0 0 11px rgba(18, 17, 17, 0.2); 
-  transform: translateY(-5px);
+  transform: translateY(1px);
   background-color: rgba(255, 255, 255, 0.15);
 }
 
 .skill-item i {
   font-size: 2.5rem;
   margin-bottom: 10px;
-  color: #0ea5e9;
 }
 
-.skill-item span {
-  font-size: 0.9rem;
-}
+/* ── Colores iconos ── */
+#HTML5, #HTML5-2 { color: rgb(255, 136, 0); }
+#CSS,   #CSS-2   { color: #0028da; }
+#JS,    #JS-2    { color: yellow; }
+#PY,    #PY-2    { color: #4053a8; }
+#SQL,   #SQL-2   { color: #949494; }
+#GIT,   #GIT-2   { color: rgb(255, 115, 0); }
+#GITH,  #GITH-2  { color: #c9d1d9; }
+#ARD,   #ARD-2   { color: #00b4d8; }
+#C,     #C-2     { color: #3a5eff; }
