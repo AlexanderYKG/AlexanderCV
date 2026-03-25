@@ -22,16 +22,9 @@
     document.body.style.overflow = 'hidden'; // evita scroll de fondo
   }
 
-  function cerrarModal(event) {
-    // Si se hace click fuera del contenido o en el botón cerrar
-    if (!event || event.target === document.getElementById('certificado__modal')) {
-      const modal = document.getElementById('certificado__modal');
-      const iframe = document.getElementById('modal__iframe');
-      modal.classList.remove('activo');
-      iframe.src = ''; // libera el PDF de memoria
-      document.body.style.overflow = '';
-    }
-  }
+  function abrirModal(pdfUrl) {
+  window.open(pdfUrl, '_blank');
+}
 
   // Cerrar con la tecla Escape
   document.addEventListener('keydown', (e) => {
