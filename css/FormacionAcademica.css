@@ -25,6 +25,74 @@
     position: relative;
     z-index: 1;
   }
+
+  .formacion__fondo {
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .formacion__particulas {
+    position: absolute;
+    inset: -40px;
+    opacity: 0.2;
+    background-image: radial-gradient(circle, rgba(125, 211, 252, 0.7) 1px, transparent 1.6px);
+    background-size: 34px 34px;
+    mask-image: linear-gradient(110deg, transparent 5%, #000 48%, transparent 100%);
+    animation: formacionPuntosFlotantes 34s linear infinite;
+  }
+
+  .formacion__particulas::after {
+    position: absolute;
+    inset: 0;
+    content: '';
+    opacity: 0.55;
+    background-image: radial-gradient(circle, rgba(250, 204, 21, 0.6) 1px, transparent 1.7px);
+    background-size: 57px 57px;
+    background-position: 15px 21px;
+    animation: formacionPuntosFlotantes 42s linear reverse infinite;
+  }
+
+  .formacion__atomo {
+    position: absolute;
+    top: 8%;
+    right: max(4%, calc((100vw - 1180px) / 2));
+    width: clamp(210px, 31vw, 390px);
+    overflow: visible;
+    opacity: 0.16;
+    animation: formacionAtomoFlotante 9s ease-in-out infinite;
+  }
+
+  .formacion__orbita {
+    fill: none;
+    stroke: #facc15;
+    stroke-width: 2.5;
+  }
+
+  .formacion__rayo {
+    fill: #ef4444;
+    opacity: 0.85;
+  }
+
+  .formacion__nucleo {
+    fill: #facc15;
+  }
+
+  .formacion__electron {
+    fill: #e2e8f0;
+  }
+
+  @keyframes formacionPuntosFlotantes {
+    from { transform: translate3d(0, 0, 0); }
+    to { transform: translate3d(34px, -34px, 0); }
+  }
+
+  @keyframes formacionAtomoFlotante {
+    0%, 100% { transform: translateY(0) rotate(-5deg); }
+    50% { transform: translateY(14px) rotate(1deg); }
+  }
   
   /* ── Título ── */
   .formacion__h2 {
@@ -77,6 +145,20 @@
   
   @keyframes formacionFadeUp {
     to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .formacion__particulas,
+    .formacion__particulas::after,
+    .formacion__atomo {
+      animation: none;
+    }
+
+    .formacion__card {
+      opacity: 1;
+      transform: none;
+      animation: none;
+    }
   }
   
   /* ── Dot ── */
@@ -192,6 +274,25 @@
     margin-right: 6px;
     font-size: 0.8rem;
   }
+
+  .formacion__institucion--escuela {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    line-height: 1.45;
+  }
+
+  .formacion__logo-escuela {
+    display: block;
+    width: 46px;
+    height: 46px;
+    flex: 0 0 46px;
+    padding: 3px;
+    object-fit: contain;
+    background: #fff;
+    border: 1px solid rgba(148, 163, 184, 0.3);
+    border-radius: 9px;
+  }
   
   /* ── Meta (fecha, modalidad) ── */
   .formacion__meta {
@@ -271,5 +372,84 @@
     }
     .formacion__content {
       padding: 16px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .formacion__h2 {
+      margin-bottom: 32px;
+    }
+
+    .formacion__timeline::before {
+      left: 11px;
+    }
+
+    .formacion__card {
+      grid-template-columns: 26px minmax(0, 1fr);
+      gap: 0 10px;
+      padding-bottom: 20px;
+    }
+
+    .formacion__dot-col {
+      padding-top: 18px;
+    }
+
+    .formacion__content {
+      min-width: 0;
+      padding: 14px 13px;
+      border-radius: 12px;
+    }
+
+    .formacion__titulo {
+      font-size: 0.98rem;
+      overflow-wrap: anywhere;
+    }
+
+    .formacion__badge {
+      font-size: 0.58rem;
+      padding: 3px 8px;
+    }
+
+    .formacion__institucion {
+      font-size: 0.78rem;
+      line-height: 1.5;
+      overflow-wrap: anywhere;
+    }
+
+    .formacion__logo-escuela {
+      width: 40px;
+      height: 40px;
+      flex-basis: 40px;
+      border-radius: 8px;
+    }
+
+    .formacion__atomo {
+      top: 5%;
+      right: -58px;
+      width: 220px;
+      opacity: 0.1;
+    }
+
+    .formacion__meta {
+      font-size: 0.7rem;
+      line-height: 1.6;
+    }
+
+    .formacion__meta span::before {
+      margin: 0 5px;
+    }
+
+    .formacion__descripcion {
+      font-size: 0.8rem;
+      line-height: 1.6;
+    }
+
+    .formacion__tags {
+      gap: 6px;
+    }
+
+    .formacion__tags .tag {
+      padding: 4px 8px;
+      font-size: 0.68rem;
     }
   }

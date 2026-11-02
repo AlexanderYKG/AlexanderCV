@@ -13,55 +13,44 @@
 
 </head>
 
-<script>
-  function abrirModal(pdfUrl) {
-    const modal = document.getElementById('certificado__modal');
-    const iframe = document.getElementById('modal__iframe');
-    iframe.src = pdfUrl;
-    modal.classList.add('activo');
-    document.body.style.overflow = 'hidden'; // evita scroll de fondo
-  }
-
-  function abrirModal(pdfUrl) {
-  window.open(pdfUrl, '_blank');
-}
-
-  // Cerrar con la tecla Escape
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') cerrarModal();
-  });
-</script>
-
 <body>
   <header>
+    <a class="brand" href="#inicio" aria-label="Alexander Yorki Garcia, inicio">
+      <img class="brand__logo" src="panda-puntos-negro.svg" alt="">
+      <span class="brand__name">Alexander Yorki Garcia</span>
+    </a>
     <nav class="botones-principales">
-      <a href="#experiencia-profesional" class="bf" id="Bton2"><i class=""></i>Experiencia</a>
-      <a href="#formacion-academica" class="bf" id="Bton2"><i class=""></i>Formación</a>
-      <a href="#Tecnologias" class="bf" id="Bton3"><i class=""></i>Tecnologias</a>
-      <a href="#proyectos" class="bf" id="Bton4"><i class=""></i>Proyectos</a>
+      <a href="#experiencia-profesional" class="bf">Experiencia</a>
+      <a href="#formacion-academica" class="bf">Formación</a>
+      <a href="#Tecnologias" class="bf">Tecnologías</a>
+      <a href="#proyectos" class="bf">Proyectos</a>
     </nav>
   </header>
 
   <main>
     <section id="inicio">
       <div class="inicio__div">
-        <h1 class="inicio__h1">
-          Alexander<span style="color: #0ea5e9;"> Yorki Garcia</span>
-        </h1>
+        <p class="inicio__eyebrow">TÉCNICO EN ELECTRÓNICA <span>·</span> FIRMWARE <span>·</span> IOT</p>
+        <h1 class="inicio__h1">Alexander<br><span>Yorki Garcia</span></h1>
         <p class="inicio__p">
-          Técnico en electrónica & Desarrollador de Firmware IoT, Estudiante de Ingeniería en Informática
+          Desarrollo soluciones embebidas y conecto el mundo físico con el software. Estudiante de Ingeniería en Informática.
         </p>
+        <div class="inicio__acciones">
+          <a class="inicio__accion inicio__accion--primaria" href="#proyectos">Ver proyectos <i class="fas fa-arrow-down" aria-hidden="true"></i></a>
+          <a class="inicio__accion" href="mailto:alexanderyorki@icloud.com">Contactar <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+        </div>
       </div>
 
       <div class="social">
-        <a href="https://goo.su/quf7j1L" target="_blank" class="social-btn"><i class="fab fa-github"></i> GitHub</a>
-        <a href="https://www.linkedin.com/in/alexanderyk?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" class="social-btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://goo.su/quf7j1L" target="_blank" rel="noopener noreferrer" class="social-btn"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
+        <a href="https://www.linkedin.com/in/alexanderyk?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer" class="social-btn"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
         <a href="mailto:alexanderyorki@icloud.com" class="social-btn"><i class="fas fa-envelope"></i> Correo</a>
       </div>
     </section>
 
     <section id="experiencia-profesional" class="seccion">
       <div class="experiencia-profesional__div">
+        <p class="experiencia-profesional__eyebrow">// experiencia</p>
         <h2 class="experiencia-profesional__h2">Experiencia Profesional</h2>
 
         <div class="experiencia-profesional__cards">
@@ -70,9 +59,12 @@
               <img class="experiencia-profesional__cardImg" src="img/myeel_logo_vidriera_pyme.webp" alt="Logo de MYEEL">
             </div>
             <div class="experiencia-profesional__cardInfo">
-              <h3 class="experiencia-profesional__cardNombre">MYEEL - Auxiliar de Laboratorio en Metrología</h3>
-              <p class="experiencia-profesional__cardFecha"><span style="color: #0ea5e9;">Contrato de prácticas</span> may. 2025 - jul. 2025</p>
-              <p class="experiencia-profesional__p"> Empresa argentina con más de 46 años de experiencia en la provisión de tecnología para redes de distribución eléctrica, agua, gas y energías renovables.</p>
+              <div class="experiencia-profesional__cardMeta">
+                <p class="experiencia-profesional__cardEmpresa">MYEEL</p>
+                <p class="experiencia-profesional__cardFecha"><span>Contrato de prácticas</span><time datetime="2025-05">may. 2025</time> — <time datetime="2025-07">jul. 2025</time></p>
+              </div>
+              <h3 class="experiencia-profesional__cardNombre">Auxiliar de Laboratorio en Metrología</h3>
+              <p class="experiencia-profesional__p">Empresa argentina con más de 46 años de experiencia en la provisión de tecnología para redes de distribución eléctrica, agua, gas y energías renovables.</p>
             </div>
           </article>
 
@@ -81,9 +73,26 @@
               <img class="experiencia-profesional__cardImg" src="img/Exo.jpg" alt="Logo de EXO">
             </div>
             <div class="experiencia-profesional__cardInfo">
-              <h3 class="experiencia-profesional__cardNombre">EXO S.A.- Técnico auxiliar</h3>
-              <p class="experiencia-profesional__cardFecha"><span style="color: #0ea5e9;">Contrato de prácticas</span> ago. 2025 - nov. 2025</p>
+              <div class="experiencia-profesional__cardMeta">
+                <p class="experiencia-profesional__cardEmpresa">EXO S.A.</p>
+                <p class="experiencia-profesional__cardFecha"><span>Contrato de prácticas</span><time datetime="2025-08">ago. 2025</time> — <time datetime="2025-11">nov. 2025</time></p>
+              </div>
+              <h3 class="experiencia-profesional__cardNombre">Técnico auxiliar</h3>
               <p class="experiencia-profesional__p">Empresa argentina fundada en 1978, que se dedica a la producción de equipos electrónicos y soluciones tecnológicas.</p>
+            </div>
+          </article>
+
+          <article class="experiencia-profesional__card">
+            <div class="experiencia-profesional__cardFoto experiencia-profesional__cardFoto--add" aria-hidden="true">
+              <span>ADD</span>
+            </div>
+            <div class="experiencia-profesional__cardInfo">
+              <div class="experiencia-profesional__cardMeta">
+                <p class="experiencia-profesional__cardEmpresa">ADD S.A.</p>
+                <p class="experiencia-profesional__cardFecha"><time datetime="2026-04">abr. 2026</time> — <time datetime="2026-09">sept. 2026</time></p>
+              </div>
+              <h3 class="experiencia-profesional__cardNombre">Técnico auxiliar</h3>
+              <p class="experiencia-profesional__p">Empresa argentina que desarrolla soluciones de software para negocios, con áreas como ERP, APIs, estacionamiento e IoT.</p>
             </div>
           </article>
         </div>
@@ -92,6 +101,21 @@
 
     <section id="formacion-academica" class="seccion">
       <div class="container">
+        <div class="formacion__fondo" aria-hidden="true">
+          <div class="formacion__particulas"></div>
+          <svg class="formacion__atomo" viewBox="0 0 280 200" focusable="false">
+            <g class="formacion__orbita">
+              <ellipse cx="140" cy="100" rx="112" ry="38" />
+              <ellipse cx="140" cy="100" rx="112" ry="38" transform="rotate(60 140 100)" />
+              <ellipse cx="140" cy="100" rx="112" ry="38" transform="rotate(-60 140 100)" />
+            </g>
+            <path class="formacion__rayo" d="M158 40 111 101h31l-25 59 58-75h-34l27-45z" />
+            <circle class="formacion__nucleo" cx="140" cy="100" r="8" />
+            <circle class="formacion__electron" cx="28" cy="100" r="4" />
+            <circle class="formacion__electron" cx="196" cy="35" r="4" />
+            <circle class="formacion__electron" cx="84" cy="158" r="4" />
+          </svg>
+        </div>
         <h2 class="formacion__h2">Formación Académica</h2>
 
         <div class="formacion__timeline">
@@ -130,7 +154,10 @@
                 <h3 class="formacion__titulo">Técnico en Electrónica</h3>
                 <span class="formacion__badge formacion__badge--completado">Completado</span>
               </div>
-              <p class="formacion__institucion"><i class="fas fa-school"></i>Esc. Técnica N° 19 - Alejandro Volta.</p>
+              <p class="formacion__institucion formacion__institucion--escuela">
+                <img class="formacion__logo-escuela" src="img/volta.jpeg" alt="Escudo de la Escuela Técnica N.º 19 Alejandro Volta">
+                <span>Esc. Técnica N.º 19 — Alejandro Volta.</span>
+              </p>
               <div class="formacion__meta">
                 <span>2020 — 2025</span>
                 <span>Título oficial</span>
@@ -157,12 +184,12 @@
     <h2 class="certificaciones__h2">Certificaciones</h2>
     <div class="certificaciones__cards">
 
-      <article id="certificacion__card-1" class="certificaciones__card" onclick="abrirModal('pdfs/Omada_Certificate_Template_A4_OCNA_Wireless_Alexander_Yorki_Garcia.pdf')">
+      <a id="certificacion__card-1" class="certificaciones__card" href="pdfs/Omada_Certificate_Template_A4_OCNA_Wireless_Alexander_Yorki_Garcia.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir certificado Omada Certified Network Administrator">
         <div class="certificacion__overlay">
           <span>Ver certificado</span>
         </div>
         <div class="certificacion__cardFoto">
-          <img class="certificaciones__cardImg" src="pngs\tp-link.png" alt="Logo TP-Link">
+          <img class="certificaciones__cardImg" src="pngs/tp-link.png" alt="Logo TP-Link">
           
         </div>
         <div class="certificaciones__contenido">
@@ -170,15 +197,15 @@
           <p>TP-Link</p>
           <span>Expedición: jun. 2025 · Vencimiento: jun. 2028</span>
         </div>
-      </article>
+      </a>
 
-      <article id="certificacion__card-2" class="certificaciones__card" onclick="abrirModal('pdfs/Alexander_Yorki_Garcia.pdf')">
+      <a id="certificacion__card-2" class="certificaciones__card" href="pdfs/Alexander_Yorki_Garcia.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir certificado Web Basics 01">
         <div class="certificacion__overlay">
           <span>Ver certificado</span>
         </div>
         
         <div class="certificacion__cardFoto">
-          <img class="certificaciones__cardImg" src="pngs\mercado-libre-argentina.png" alt="Logo de Mercado Libre">
+          <img class="certificaciones__cardImg" src="pngs/mercado-libre-argentina.png" alt="Logo de Mercado Libre">
           
         </div>
         <div class="certificaciones__contenido">
@@ -186,33 +213,25 @@
           <p>Beta hub programa educativo de Mercado Libre</p>
           <span>Expedición: abr. 2024</span>
         </div>
-      </article>
+      </a>
 
-      <article id="certificacion__card-3" class="certificaciones__card" onclick="abrirModal('pdfs/Certificado_AP.pdf')">
+      <a id="certificacion__card-3" class="certificaciones__card" href="pdfs/Certificado_AP.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir certificado Desarrollo con Python">
         <div class="certificacion__overlay">
           <span>Ver certificado</span>
         </div>
         <div class="certificacion__cardFoto" >
-          <img class="certificaciones__cardImg" src="pngs\buenos-aires-city-government.png" alt="Logo de Mercado Libre">
+          <img class="certificaciones__cardImg" src="pngs/buenos-aires-city-government.png" alt="Logo del Gobierno de la Ciudad de Buenos Aires">
         </div>
         <div class="certificaciones__contenido">
           <h3>Desarrollo con Python</h3>
           <p>Gobierno de la Ciudad de Buenos Aires</p>
           <span>Expedición: dic. 2023</span>
         </div>
-      </article>
+      </a>
 
     </div>
   </div>
 </section>
-
-<div id="certificado__modal" class="modal" onclick="cerrarModal(event)">
-  <div class="modal__contenido">
-    <button class="modal__cerrar" onclick="cerrarModal()">✕</button>
-    <iframe id="modal__iframe" src="" frameborder="0"></iframe>
-  </div>
-</div>
-
 
 <section id="Tecnologias" class="seccion">
   <div class="contenedor-Habilidades">
@@ -252,7 +271,7 @@
         <h2 class="proyectos-h2">Proyectos</h2>
         <div class="proyectos-container">
           <article class="proyecto">
-            <div class="proyecto-img"><img src="img\25115.jpg" alt="Proyecto 1"><span class="proyecto-badge">En Refactorización</span></div>
+            <div class="proyecto-img"><img src="img/25115.jpg" alt="Vista del proyecto Sistema de Clasificación de Objetos"><span class="proyecto-badge">En Refactorización</span></div>
             
             <div class="proyecto-content">
               <h3>Sistema de Clasificación de Objetos</h3>
@@ -268,27 +287,27 @@
                   <span class="tag">Sistema embebido</span>
                 </div>
               <div class="proyecto-links">
-                <a href="#" class="proyecto-link"><i class="fas fa-external-link-alt"></i> Demo</a>
-                <a href="#" class="proyecto-link"><i class="fab fa-github"></i> Código</a>
+                <span class="proyecto-link proyecto-link--disabled" aria-disabled="true"><i class="fas fa-external-link-alt" aria-hidden="true"></i> Demo próximamente</span>
+                <span class="proyecto-link proyecto-link--disabled" aria-disabled="true"><i class="fab fa-github" aria-hidden="true"></i> Código próximamente</span>
               </div>
             </div>
           </article>
 
           <article class="proyecto">
-            <div class="proyecto-img"><img src="img\25115.jpg" alt="Proyecto 2"><span class="proyecto-badge">En Desarrollo</span></div>
+            <div class="proyecto-img"><img src="img/25115.jpg" alt="Vista del proyecto Dashboard Analytics"><span class="proyecto-badge">En Desarrollo</span></div>
             <div class="proyecto-content">
               <h3>Dashboard Analytics</h3>
               <p>Panel de control interactivo para visualización de datos con gráficos y reportes en tiempo real.</p>
               <div class="proyecto-links">
-                <a href="#" class="proyecto-link"><i class="fas fa-external-link-alt"></i> Demo</a>
-                <a href="#" class="proyecto-link"><i class="fab fa-github"></i> Código</a>
+                <span class="proyecto-link proyecto-link--disabled" aria-disabled="true"><i class="fas fa-external-link-alt" aria-hidden="true"></i> Demo próximamente</span>
+                <span class="proyecto-link proyecto-link--disabled" aria-disabled="true"><i class="fab fa-github" aria-hidden="true"></i> Código próximamente</span>
               </div>
             </div>
           </article>
 
           <article class="proyecto">
             <div class="proyecto-img">
-              <img src="img\25115.jpg" alt="Hacker Dot">
+              <img src="img/25115.jpg" alt="Vista del proyecto Hack Dot">
               <span class="proyecto-badge">En desarrollo</span>
             </div>
             <div class="proyecto-content">
@@ -303,7 +322,7 @@
                 <span class="tag">Sistema embebido</span>
               </div>
               <div class="proyecto-links">
-                <a href="#" class="proyecto-link"><i class="fab fa-github"></i> Código</a>
+                <span class="proyecto-link proyecto-link--disabled" aria-disabled="true"><i class="fab fa-github" aria-hidden="true"></i> Código próximamente</span>
               </div>
             </div>
           </article>
@@ -325,20 +344,20 @@
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#experiencia-profesional">Experiencia Profesional</a></li>
             <li><a href="#formacion-academica">Formación Académica</a></li>
-            <li><a href="#Habilidades">Habilidades</a></li>
+            <li><a href="#Tecnologias">Tecnologías</a></li>
             <li><a href="#proyectos">Proyectos</a></li>
             <li><a href="#certificaciones">Certificaciones</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="mailto:alexanderyorki@icloud.com">Contacto</a></li>
           </ul>
         </div>
   
         <div class="footer-social">
           <h4>Contáctame</h4>
           <div class="social-icons">
-            <a href="https://goo.su/quf7j1L" target="_blank" title="GitHub">
+            <a href="https://goo.su/quf7j1L" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub">
               <i class="fab fa-github"></i>
             </a>
-            <a href="https://www.linkedin.com/in/alexanderyk?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" title="LinkedIn">
+            <a href="https://www.linkedin.com/in/alexanderyk?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn">
               <i class="fab fa-linkedin"></i>
             </a>
             <a href="mailto:alexanderyorki@icloud.com" title="Correo">

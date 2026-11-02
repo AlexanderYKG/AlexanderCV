@@ -1,80 +1,32 @@
-/* Estilo del enlace */
 .bf {
-  text-decoration: none;
-  color: inherit;
   position: relative;
-  padding: 10px 15px; /* Reducir el padding para ajustarlo mejor en el header */
-  margin-right: 10px; /* Agregar margen derecho para separar los enlaces */
-  transition: all 0.2s ease;
-  display: inline-block; /* Convertir los enlaces en elementos en línea con dimensiones */
-  line-height: 1; /* Ajustar la altura de línea para centrar verticalmente */
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 11px;
+  border-radius: 8px;
+  color: #cbd5e1;
+  font-size: 0.82rem;
+  font-weight: 500;
+  transition: color 0.2s ease, background-color 0.2s ease;
 }
 
-@media (max-width: 914px) {
+.bf:hover,
+.bf:focus-visible {
+  color: #f8fafc;
+  background: rgba(56, 189, 248, 0.1);
+}
+
+.bf:focus-visible,
+.brand:focus-visible,
+.inicio__accion:focus-visible,
+.social-btn:focus-visible {
+  outline: 2px solid #38bdf8;
+  outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
   .bf {
-    padding: 9px 10px;
-    margin-right: 4px;
-    font-size: 0.92rem;
+    padding: 9px 7px;
+    font-size: 0.7rem;
   }
 }
-
-@media (max-width: 600px) {
-  .bf {
-      margin-right: -13px;
-      padding: 10px 10px; /* Ajusta el espacio interno del botón */
-  }
-}
-/* Estilo del círculo detrás del botón */
-.bf:before {
-  content: "";
-  position: absolute;
-  bottom: 10%;
-  left: 0; /* Alinear el círculo a la derecha */
-  transform: translateY(-50%);
-  display: block;
-  border-radius: 5%; /* Usar un radio de borde circular */
-  background: rgba(14, 165, 233, 0.45);
-  width: 1px;/* Reducir el ancho del círculo */
- /* Reducir la altura del círculo */
-  transition: all 0.3s ease;
-}
-
-/* Estilo del texto dentro del botón */
-.bf span {
-  font-size: 14px; /* Reducir el tamaño del texto */
-  font-weight: 700;
-  text-transform: uppercase;
-  vertical-align: middle;
-}
-
-/* Estilo del icono SVG dentro del botón */
-.bf svg {
-  vertical-align: middle;
-  fill: none;
-  stroke: #111;
-  stroke-width: 2;
-  transition: all 0.3s ease;
-}
-
-/* Cambios al pasar el ratón sobre el botón */
-.bf:hover:before {
-  background: #0ea5e9;
-  opacity: 0.7;
-  width: 100%; /* Aumentar el tamaño del círculo al pasar el ratón */
-  height: 10%; /* Aumentar el tamaño del círculo al pasar el ratón */
-}
-
-/* Cambios al hacer clic en el botón */
-.bf:active {
-  color: #ed7516;
-  transform: scale(0.96);
-}
-
-/* Alineación de los enlaces en el header */
-header {
-  display: flex;
-  justify-content: center; /* Centrar los enlaces a la derecha */
-  align-items: center; /* Alinear verticalmente al centro */
-}
-
-

@@ -11,6 +11,17 @@
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
+  scroll-behavior: smooth;
+}
+
+.seccion {
+  scroll-margin-top: 100px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 /* Sections

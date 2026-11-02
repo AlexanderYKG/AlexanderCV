@@ -46,6 +46,12 @@
   to   { transform: translateX(-50%); }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .skills-container-items {
+    animation: none;
+  }
+}
+
 /* ── Cards ── */
 .skill-item {
   display: flex;

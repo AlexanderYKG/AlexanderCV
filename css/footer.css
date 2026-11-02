@@ -5,13 +5,11 @@ footer {
 }
 
 .footer-content {
-  .footer-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* 3 columnas iguales */
-    gap: 50px;
-    margin-bottom: 40px;
-    align-items: start;
-  }
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+  margin-bottom: 40px;
+  align-items: start;
 }
 
 .footer-logo h3 {
