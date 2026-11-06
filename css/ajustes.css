@@ -25,8 +25,16 @@ footer { background-color: transparent; }
 .experiencia-profesional__card {
   padding: clamp(20px, 3vw, 28px);
   background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
 }
-.experiencia-profesional__card:hover { background-color: rgba(255, 255, 255, 0.05); }
+.experiencia-profesional__card:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
 .experiencia-profesional__h2,
 .formacion__h2,
 .certificaciones__h2,
@@ -41,6 +49,7 @@ footer { background-color: transparent; }
 .formacion__content {
   padding: clamp(22px, 3.2vw, 32px);
   background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 .proyectos-container { max-width: 1120px; gap: clamp(16px, 2.4vw, 26px); }
 @media (max-width: 640px) {
