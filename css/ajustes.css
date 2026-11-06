@@ -22,7 +22,11 @@ footer { background-color: transparent; }
 .container { max-width: 1160px; padding-inline: clamp(18px, 4vw, 32px); }
 .experiencia-profesional__div { max-width: 1060px; padding-inline: clamp(18px, 4vw, 32px); }
 .experiencia-profesional__cards { gap: 18px; }
-.experiencia-profesional__card { padding: clamp(20px, 3vw, 28px); }
+.experiencia-profesional__card {
+  padding: clamp(20px, 3vw, 28px);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.experiencia-profesional__card:hover { background-color: rgba(255, 255, 255, 0.05); }
 .experiencia-profesional__h2,
 .formacion__h2,
 .certificaciones__h2,
@@ -34,7 +38,10 @@ footer { background-color: transparent; }
 }
 .formacion__h2, .certificaciones__h2, .Habilidades_h2, .proyectos-h2 { padding-bottom: 0; }
 .formacion__timeline { max-width: 900px; }
-.formacion__content { padding: clamp(22px, 3.2vw, 32px); }
+.formacion__content {
+  padding: clamp(22px, 3.2vw, 32px);
+  background-color: rgba(255, 255, 255, 0.05);
+}
 .proyectos-container { max-width: 1120px; gap: clamp(16px, 2.4vw, 26px); }
 @media (max-width: 640px) {
   html { scroll-padding-top: 82px; }
