@@ -1,0 +1,51 @@
+/* Ajustes de ritmo y escala sobre el diseño existente. */
+html { scroll-behavior: smooth; scroll-padding-top: 104px; }
+body { position: relative; isolation: isolate; background: #020617; }
+#atoms {
+  position: fixed; z-index: 0; inset: 0; width: 100%; height: 100%;
+  pointer-events: none;
+}
+header, main, footer { position: relative; z-index: 1; }
+#inicio {
+  background:
+    radial-gradient(ellipse at 78% 18%, rgba(14, 165, 233, 0.12), transparent 34%),
+    radial-gradient(ellipse at 16% 82%, rgba(14, 165, 233, 0.07), transparent 38%),
+    transparent;
+}
+#experiencia-profesional,
+#formacion-academica,
+#certificaciones,
+#Tecnologias,
+footer { background-color: transparent; }
+.seccion { padding-block: clamp(76px, 9vw, 116px); }
+.container { max-width: 1160px; padding-inline: clamp(18px, 4vw, 32px); }
+.experiencia-profesional__div { max-width: 1060px; padding-inline: clamp(18px, 4vw, 32px); }
+.experiencia-profesional__cards { gap: 18px; }
+.experiencia-profesional__card { padding: clamp(20px, 3vw, 28px); }
+.experiencia-profesional__h2,
+.formacion__h2,
+.certificaciones__h2,
+.Habilidades_h2,
+.proyectos-h2 {
+  margin-bottom: clamp(32px, 5vw, 52px);
+  font-size: clamp(1.85rem, 3.6vw, 2.6rem);
+  line-height: 1.12;
+}
+.formacion__h2, .certificaciones__h2, .Habilidades_h2, .proyectos-h2 { padding-bottom: 0; }
+.formacion__timeline { max-width: 900px; }
+.formacion__content { padding: clamp(22px, 3.2vw, 32px); }
+.proyectos-container { max-width: 1120px; gap: clamp(16px, 2.4vw, 26px); }
+@media (max-width: 640px) {
+  html { scroll-padding-top: 82px; }
+  #inicio { padding-inline: 22px; }
+  .seccion { padding-block: 68px; }
+  .experiencia-profesional__div { padding-inline: 20px; }
+  .experiencia-profesional__h2, .formacion__h2, .certificaciones__h2,
+  .Habilidades_h2, .proyectos-h2 {
+    margin-bottom: 30px;
+    font-size: clamp(1.7rem, 8vw, 2.1rem);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

@@ -5,8 +5,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alexander Yorki Garcia</title>
-  <link rel="stylesheet" href="css/Mein.css" />
   <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/Mein.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <meta name="google-site-verification" content="d2Z-5Xb4C2THT92jO-AqghuwB_zcx8GtLRvj6yb76KU" />
@@ -14,6 +14,7 @@
 </head>
 
 <body>
+  <canvas id="atoms" aria-hidden="true"></canvas>
   <header>
     <a class="brand" href="#inicio" aria-label="Alexander Yorki Garcia, inicio">
       <img class="brand__logo" src="panda-puntos-negro.svg" alt="">
@@ -101,21 +102,6 @@
 
     <section id="formacion-academica" class="seccion">
       <div class="container">
-        <div class="formacion__fondo" aria-hidden="true">
-          <div class="formacion__particulas"></div>
-          <svg class="formacion__atomo" viewBox="0 0 280 200" focusable="false">
-            <g class="formacion__orbita">
-              <ellipse cx="140" cy="100" rx="112" ry="38" />
-              <ellipse cx="140" cy="100" rx="112" ry="38" transform="rotate(60 140 100)" />
-              <ellipse cx="140" cy="100" rx="112" ry="38" transform="rotate(-60 140 100)" />
-            </g>
-            <path class="formacion__rayo" d="M158 40 111 101h31l-25 59 58-75h-34l27-45z" />
-            <circle class="formacion__nucleo" cx="140" cy="100" r="8" />
-            <circle class="formacion__electron" cx="28" cy="100" r="4" />
-            <circle class="formacion__electron" cx="196" cy="35" r="4" />
-            <circle class="formacion__electron" cx="84" cy="158" r="4" />
-          </svg>
-        </div>
         <h2 class="formacion__h2">Formación Académica</h2>
 
         <div class="formacion__timeline">
@@ -384,3 +370,6 @@
   <script>
     document.getElementById('current-year').textContent = new Date().getFullYear();
   </script>
+  <script src="js/atoms.js" defer></script>
+</body>
+</html>
