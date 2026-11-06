@@ -48,11 +48,12 @@ footer { background-color: transparent; }
 .formacion__timeline { max-width: 900px; }
 .formacion__content {
   padding: clamp(22px, 3.2vw, 32px);
-  background-color: rgba(15, 23, 42, 0.82);
+  background-color: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(10px);
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 .formacion__card:hover .formacion__content {
-  background-color: rgba(15, 23, 42, 0.82);
+  background-color: rgba(15, 23, 42, 0.55);
 }
 .proyectos-container { max-width: 1120px; gap: clamp(16px, 2.4vw, 26px); }
 @media (max-width: 640px) {
